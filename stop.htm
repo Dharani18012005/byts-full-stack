@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            background-color:bisque;
+            color: black;
+            font-weight: 600;
+            border-radius: 15px;
+            background-color: darkgrey;
+            padding: 10px;
+        }
+        body{
+            text-align: center;
+            padding-top: 10px;
+            background-color:bisque;
+        }
+        #count{
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <p id="count=0"></p>
+    <button onclick="strt()">START</button>
+    <button onclick="stp()">STOP</button>
+    <button onclick="rset()">RESET</button>
+    <script>
+        let count=0;
+        let intervalId;
+        function strt(){
+            intervalId=setInterval(() => {
+               document.getElementById("count=0").innerText=++count;
+            }, 1000);
+        }
+        function stp(){
+            clearInterval(intervalId);
+        }
+        function rset(){
+         clearInterval(intervalId);
+         count=0;
+         document.getElementById("count=0").innerText=0;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            background-color:darkgray;
+            color: black;
+        }
+        label{
+            font-weight: bolder;
+        }
+        button{
+            background-color:gray;
+            color: black;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+        body{
+            text-align: center;
+        }
+        #res{
+            text-transform: capitalize;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <p id="res"></p>
+    <label for="num1">ENTER NUM1</label>
+    <input type="number" name="num1" id="num1" min="0" max="100"><br><br>
+    <label for="num2">ENTER NUM2</label>
+    <input type="number" name="num1" id="num2" min="0" max="100">
+    <br><br>
+    <button onclick="fn()">ADD</button>
+    <script>
+        function fn(){
+            a=document.getElementById("num1").value;
+            b=document.getElementById("num2").value;
+            c=Number(a)+Number(b);
+            d=document.getElementById("res");
+            d.innerText=`result of two numbers:${c}`;
+           
+        }
+    </script>
+</body>
+</html>
